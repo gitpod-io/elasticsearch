@@ -3,7 +3,7 @@
 trap "exit" INT
 
 function execute_once() {
-    timestamp=$(date +%Y%m%d%H%M%S)
+    timestamp=.log/$(date +%Y%m%d%H%M%S)
     mkdir -p $timestamp
 
     echo $timestamp
