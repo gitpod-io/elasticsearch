@@ -998,3 +998,4 @@ repeating in this section because it has come up in this context.
 [Eclipse Code Formatter]: https://plugins.jetbrains.com/plugin/6546-eclipse-code-formatter
 [Spotless Gradle]: https://github.com/diffplug/spotless/tree/main/plugin-gradle
 >
+>
