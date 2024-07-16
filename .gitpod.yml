@@ -6,6 +6,7 @@ tasks:
   before: |
     mkdir -p /workspace/.gradle
     printf "org.gradle.jvmargs=-Xmx6g\norg.gradle.daemon=true\n" > /workspace/.gradle/gradle.properties
+    mkdir -p /workspace/jvm_debug
   # init: |
   #   ./gradlew compileAll -PfetchGwt
   #   ./gradlew ideImport
