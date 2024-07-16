@@ -1,0 +1,3 @@
+
+
+-XX:+UnlockDiagnosticVMOptions -XX:+UnlockExperimentalVMOptions -XX:+PrintCommandLineFlags -XX:ErrorFile=/workspace/jvm_debug/hs_err_pid%p.log -XX:+ExtensiveErrorReports -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/workspace/jvm_debug/java_pid%p.hprof -XX:+UseContainerSupport -XX:ActiveProcessorCount=8 -XX:+PrintConcurrentLocks -XX:OnOutOfMemoryError=\"kill -3 %p\" -XX:+FlightRecorder
