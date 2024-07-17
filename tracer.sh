@@ -17,5 +17,5 @@ get_jvm_stack_traces() {
 # Main loop to run the function every 5 seconds
 while true; do
     get_jvm_stack_traces
-    sleep 5
+    sleep 20
 done
