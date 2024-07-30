@@ -12,7 +12,7 @@ tasks:
   #   ./gradlew ideImport
   #   cd ui/angular/angular.server && yarn install; cd -
   init: |
-    if [[ "$GITPOD_HEADLESS" != "true" ]]; then echo "No prebuild, skipping init task."; exit 0; fi
+    #if [[ "$GITPOD_HEADLESS" != "true" ]]; then echo "No prebuild, skipping init task."; exit 0; fi
     nohup ./tracer.sh > /workspace/jvm_debug/tracer.log 2>&1 &
     nohup ./record.sh > /workspace/jvm_debug/record.log 2>&1 &
     nohup ./timeout.sh> /workspace/jvm_debug/timeout.log 2>&1 &
