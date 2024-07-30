@@ -19,6 +19,7 @@ import org.elasticsearch.gradle.internal.info.BuildParams
 import org.elasticsearch.gradle.util.GradleUtils
 import org.gradle.plugins.ide.eclipse.model.AccessRule
 import org.gradle.plugins.ide.eclipse.model.ProjectDependency
+import java.lang.management.ManagementFactory
 
 import java.nio.file.Files
 
@@ -437,3 +438,28 @@ tasks.register("spotlessApply").configure {
   dependsOn gradle.includedBuild('build-tools').task(':reaper:spotlessApply')
   dependsOn gradle.includedBuild('build-tools-internal').task(':spotlessApply')
 }
+
+def pid = ManagementFactory.getRuntimeMXBean().getName().split("@")[0]
+def logFile = new File("daemon-info-${pid}.log")
+logFile.text = ''
+
+def env = System.getenv()
+logFile << "Environment Variables:\n"
+env.each { k, v -> logFile << "${k}=${v}\n" }
+
+def props = System.properties
+logFile << "\nSystem Properties:\n"
+props.each { k, v -> logFile << "${k}=${v}\n" }
+
+def jvmArgs = ManagementFactory.getRuntimeMXBean().getInputArguments()
+logFile << "\nJVM Arguments:\n"
+jvmArgs.each { arg -> logFile << "${arg}\n" }
+
+def gradleVersion = project.gradle.gradleVersion
+logFile << "\nGradle Version: ${gradleVersion}\n"
+
+def buildCacheEnabled = gradle.startParameter.isBuildCacheEnabled()
+logFile << "Build Cache Enabled: ${buildCacheEnabled}\n"
+
+def parallelExecutionEnabled = gradle.startParameter.isParallelProjectExecutionEnabled()
+logFile << "Parallel Execution Enabled: ${parallelExecutionEnabled}\n"
