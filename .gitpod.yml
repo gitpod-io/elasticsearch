@@ -2,7 +2,24 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: ./gradlew localDistro
+  - init: |
+      #!/bin/bash
+
+      echo "Waiting for Gradle daemon to start..."
+      while ! gradle --status | grep -q "PID"; do
+        sleep 1
+        echo "Waiting..."
+      done
+      echo "Gradle daemon is running."
+
+      echo "Waiting for Gradle daemon to be free..."
+      while gradle --status | grep -q "BUSY"; do
+        sleep 1
+        echo "Waiting..."
+      done
+
+      echo "Gradle daemon is free. Running build..."
+      ./gradlew localDistro
 
 jetbrains:
   intellij:
