@@ -2,7 +2,9 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: ./gradlew -d localDistro | grep -i daemon > daemon-debug-log.txt
+  - init: |
+      sleep 120
+      ./gradlew -d localDistro | grep -i daemon > daemon-debug-log.txt
 
 jetbrains:
   intellij:
