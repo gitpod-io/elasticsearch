@@ -45,6 +45,34 @@ plugins {
   id 'elasticsearch.versions'
 }
 
+// Declare the lock file
+ext.lockFile = new File(rootDir, 'build.lock')
+
+// Function to acquire the lock
+def acquireLock() {
+    while (!lockFile.createNewFile()) {
+        println "Another build is running, waiting..."
+        sleep(1000)
+    }
+    println "Lock in ${rootDir} acquired, proceeding with the build..."
+}
+
+// Function to release the lock
+def releaseLock() {
+    if (lockFile.exists()) {
+        lockFile.delete()
+        println "Lock released."
+    }
+}
+
+// Acquire the lock before the configuration phase starts
+acquireLock()
+
+// Register a shutdown hook to release the lock after the build finishes
+gradle.buildFinished {
+    releaseLock()
+}
+
 /**
  * This is a convenient method for declaring test artifact dependencies provided by the internal
  * test artifact plugin. It replaces basically the longer dependency notation with explicit capability
@@ -437,3 +465,4 @@ tasks.register("spotlessApply").configure {
   dependsOn gradle.includedBuild('build-tools').task(':reaper:spotlessApply')
   dependsOn gradle.includedBuild('build-tools-internal').task(':spotlessApply')
 }
+
