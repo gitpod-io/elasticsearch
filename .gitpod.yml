@@ -15,17 +15,21 @@ tasks:
       while true; do
         if gradle --status 2>/dev/null | grep -q "BUSY"; then
             sleep 1
+            echo "Busy..."
         else
             echo "Gradle daemon is free. Monitoring for 10 seconds..."
             is_free_for_10_seconds=true
-            for ((i=0; i<10; i++)); do
+            for ((i=0; i<20; i++)); do
                 if gradle --status 2>/dev/null | grep -q "BUSY"; then
                     is_free_for_10_seconds=false
+                    echo "Busy again!"
                     break
                 fi
                 sleep 1
+                echo "Monitoring..."
             done
             if [ "$is_free_for_10_seconds" = true ]; then
+                echo "Free at last..."
                 break
             fi
         fi
