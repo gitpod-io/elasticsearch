@@ -5,7 +5,7 @@ tasks:
 - name: Init cluster workspace
   before: |
     mkdir -p /workspace/.gradle
-    printf "org.gradle.jvmargs=-Xmx6g\norg.gradle.daemon=true\n" > /workspace/.gradle/gradle.properties
+    printf "org.gradle.jvmargs=-Xmx6g\norg.gradle.daemon=true\norg.gradle.parallel=true\n" > /workspace/.gradle/gradle.properties
     mkdir -p /workspace/jvm_debug
   # init: |
   #   ./gradlew compileAll -PfetchGwt
