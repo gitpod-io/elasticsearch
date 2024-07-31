@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f88c9f7f-38b3-4f2d-9173-da97ad863a67" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2jyhqyiMk1cJd381ntO8x1TFev8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "settings.build.tools.auto.reload": "SELECTIVE",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RdControllerToolWindowsLayoutState" isNewUi="false">
+    <layout>
+      <window_info id="Commit_Guest" show_stripe_button="false" />
+      <window_info id="Bookmarks" order="0" show_stripe_button="false" side_tool="true" />
+      <window_info id="Merge Requests" order="0" show_stripe_button="false" />
+      <window_info id="Structure" order="0" show_stripe_button="false" side_tool="true" />
+      <window_info id="Pull Requests" order="0" show_stripe_button="false" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info id="Commit" order="0" show_stripe_button="false" />
+      <window_info id="Learn" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Profiler" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="4" visible="true" weight="0.329582" />
+      <window_info anchor="bottom" id="TODO" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Problems View" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.329582" />
+      <window_info anchor="bottom" id="Services" order="4" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven" order="0" />
+      <window_info anchor="right" id="Endpoints" order="0" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" show_stripe_button="false" />
+      <window_info anchor="right" id="Coverage" order="0" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" id="AIAssistant" order="0" show_stripe_button="false" />
+      <window_info anchor="right" id="Gradle" order="0" show_stripe_button="false" />
+      <window_info active="true" anchor="right" id="Notifications" order="0" visible="true" weight="0.25041527" />
+    </layout>
+  </component>
+  <component name="RunManager" selected="Remote JVM Debug.Debug Elasticsearch" />
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f88c9f7f-38b3-4f2d-9173-da97ad863a67" name="Changes" comment="" />
+      <created>1722365418555</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722365418555</updated>
+      <workItem from="1722365419834" duration="67000" />
+      <workItem from="1722407102228" duration="120000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
