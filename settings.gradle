@@ -17,6 +17,7 @@ pluginManagement {
 }
 
 plugins {
+  id 'com.gradle.enterprise' version '3.13.1'
   id "com.gradle.develocity" version "3.17.4"
   id 'elasticsearch.java-toolchain'
 }
@@ -176,4 +177,15 @@ if (extraProjects.exists()) {
   for (File extraProjectDir : extraProjects.listFiles()) {
     addSubProjects('', extraProjectDir)
   }
+}
+
+gradleEnterprise {
+    buildScan {
+        // Accept the terms of service automatically
+        termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+        termsOfServiceAgree = 'yes'
+
+        // Always publish a build scan without requiring --scan
+        publishAlways()
+    }
 }
