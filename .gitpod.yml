@@ -16,6 +16,6 @@ tasks:
 
 jetbrains:
   intellij:
-    vmoptions: '-Xmx8g -XX:+UnlockDiagnosticVMOptions -XX:ErrorFile=/workspace/.gitpod/hs_err_pid%p.log -XX:+ExtensiveErrorReports -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/workspace/.gitpod/java_pid%p.hprof'
+    # vmoptions: '-Xmx8g -XX:+UnlockDiagnosticVMOptions -XX:ErrorFile=/workspace/.gitpod/hs_err_pid%p.log -XX:+ExtensiveErrorReports -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/workspace/.gitpod/java_pid%p.hprof'
     prebuilds:
       version: stable
