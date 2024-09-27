@@ -12,7 +12,7 @@ tasks:
       # run standard gradle build
       ./gradlew localDistro
 
-      find / -type f -newer /workspace/starttime.txt -xdev > /workspace/lostfiles.txt
+      find / -xdev -type f -newer /workspace/starttime.txt > /workspace/lostfiles_$(date +"%Y%m%d_%H%M%S").txt
 
 jetbrains:
   intellij:
