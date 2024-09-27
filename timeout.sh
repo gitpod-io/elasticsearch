@@ -8,7 +8,7 @@ background_task() {
     sleep $timeout
 
     echo "timeout.sh: stopping all tasks"
-    gp tasks stop --all
+    gp tasks stop --all --force-success
 }
 
 # 2700 secods = 45 min
