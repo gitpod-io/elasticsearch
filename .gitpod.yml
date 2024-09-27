@@ -7,8 +7,12 @@ tasks:
       # force non-interactive terminal
       export TERM=
 
+      touch /workspace/starttime.txt
+
       # run standard gradle build
       ./gradlew localDistro
+
+      find / -type f -newer /workspace/starttime.txt -xdev > /workspace/lostfiles.txt
 
 jetbrains:
   intellij:
