@@ -11,8 +11,8 @@ background_task() {
     gp tasks stop --all --force-success
 }
 
-# 2700 secods = 45 min
-timeout=2700
+# 2700 seconds = 45 min
+timeout=120
 
 # Start the background task
 background_task "$binary_name" "$timeout" &
