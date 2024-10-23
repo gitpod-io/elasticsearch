@@ -9,8 +9,19 @@ tasks:
       fi
 
       # disable Gradle auto-reload in IntelliJ
-      cat .idea/workspace.xml
-      xmlstarlet ed --inplace -u '//option[@name="autoReloadType"]/@value' -v 'NONE' .idea/workspace.xml
+      if [ -f ".idea/workspace.xml" ]; then
+          xmlstarlet ed --inplace -u '//option[@name="autoReloadType"]/@value' -v 'NONE' .idea/workspace.xml
+      else
+          mkdir -p .idea
+          cat > .idea/workspace.xml <<EOL
+      <?xml version="1.0" encoding="UTF-8"?>
+      <project version="4">
+          <component name="AutoImportSettings">
+              <option name="autoReloadType" value="SELECTIVE" />
+          </component>
+      </project>
+      EOL
+      fi
 
       # run standard gradle build
       ./gradlew localDistro
