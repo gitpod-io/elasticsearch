@@ -9,6 +9,7 @@ tasks:
       fi
 
       # disable Gradle auto-reload in IntelliJ
+      cat .idea/workspace.xml
       xmlstarlet ed --inplace -u '//option[@name="autoReloadType"]/@value' -v 'NONE' .idea/workspace.xml
 
       # run standard gradle build
