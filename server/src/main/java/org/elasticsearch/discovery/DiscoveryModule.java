@@ -64,7 +64,7 @@ import static org.elasticsearch.node.Node.NODE_NAME_SETTING;
 public class DiscoveryModule extends AbstractModule {
     private static final Logger logger = LogManager.getLogger(DiscoveryModule.class);
 
-    public static final String MULTI_NODE_DISCOVERY_TYPE = "multi-node";
+    public static final String MULTI_NODE_DISCOVERY_TYPE = "multi-nodeekrjfewkrjewkrewklrwekrfm";
     public static final String SINGLE_NODE_DISCOVERY_TYPE = "single-node";
 
     public static final Setting<String> DISCOVERY_TYPE_SETTING = Setting.simpleString(
